@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { useLocale } from "next-intl";
 import { CategoryWithIntentions } from "@/lib/types/database";
 import { Hero } from "./hero";
 import { CategoryGrid } from "./category-grid";
@@ -12,7 +11,6 @@ interface HomeContentProps {
 }
 
 export function HomeContent({ categories }: HomeContentProps) {
-  const locale = useLocale();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] =
     useState<CategoryWithIntentions | null>(null);
